@@ -34,4 +34,17 @@ The script generates a report file named `report_output` in the current director
 ## Caution
 
 - This script requires sudo privileges to run effectively.
-- The OS backup function is commented out by default. Uncomment if needed, but be aware of p
+- The OS backup function is commented out by default. Uncomment if needed, but be aware of potential disk space issues.
+- Modifying file permissions can impact system functionality. Use with caution.
+
+## Customization
+
+- Modify the `REPORT_FILE` variable to change the output file name.
+- Adjust user names in the password change section as needed.
+- Customize file search patterns and permission settings to suit your environment.
+
+## Author
+
+Brendan Conroy, Kuleni, Frederick
+
+
