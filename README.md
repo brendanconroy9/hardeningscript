@@ -1,50 +1,65 @@
-# System Information and Security Script
+# System Information and Security Scripts
 
 ## Overview
 
-This Bash script performs various system information gathering and security-related tasks on a Linux system. It collects system data, enforces password policies, and manages file permissions, outputting results to a report file.
+This repository contains two Bash scripts designed for system information gathering, security enhancement, and system maintenance on Linux systems. These scripts collect system data, enforce security policies, manage file permissions, and perform system updates.
 
-## Features
+## Scripts
 
-- **System Information Gathering**
-  - Hostname
-  - OS version
-  - Memory information
-  - System uptime
+### 1. System Information and Security Script (Script 1)
 
-- **Security Measures**
-  - OS backup (commented out by default)
-  - Force password change for specific users
-  - Sudoers file examination
+#### Features
+- Gathers system information (hostname, OS version, memory, uptime)
+- Performs OS backup (commented out by default)
+- Enforces password change for specific users
+- Examines sudoers file
+- Manages file permissions
 
-- **File Permission Management**
-  - Identify and remove world-readable permissions
-  - Set specific permissions for Engineering, Research, and Finance scripts
+#### Output
+Generates a report file named `report_output`
+
+### 2. System Configuration and Update Script (Script 2)
+
+#### Features
+- Captures SSH configuration details
+- Updates and upgrades system packages
+- Lists all installed packages
+- Retrieves logging configuration data
+
+#### Output
+Generates a report file named `Report_File_2`
 
 ## Usage
 
-1. Save the script as `system_info_security.sh`
-2. Make it executable: `chmod +x system_info_security.sh`
-3. Run the script with sudo privileges: `sudo ./system_info_security.sh`
+1. Ensure both scripts are in the same directory.
+2. Make the scripts executable:
 
-## Output
+chmod +x script1.sh script2.sh
 
-The script generates a report file named `report_output` in the current directory, containing all gathered information and actions performed.
+3. Run the scripts with sudo privileges:
+
+sudo ./script1.sh
+sudo ./script2.sh
+
+
+## Output Files
+
+- Script 1 generates `report_output`
+- Script 2 generates `Report_File_2`
+
+Both files will be created in the current directory.
 
 ## Caution
 
-- This script requires sudo privileges to run effectively.
-- The OS backup function is commented out by default. Uncomment if needed, but be aware of potential disk space issues.
-- Modifying file permissions can impact system functionality. Use with caution.
+- These scripts require sudo privileges to run effectively.
+- The OS backup function in Script 1 is commented out by default. Uncomment if needed, but be aware of potential disk space issues.
+- Modifying file permissions and system configurations can impact system functionality. Use with caution.
 
 ## Customization
 
-- Modify the `REPORT_FILE` variable to change the output file name.
-- Adjust user names in the password change section as needed.
-- Customize file search patterns and permission settings to suit your environment.
+- In each script, you can modify the `REPORT_FILE` variable to change the output file name.
+- Adjust user names, file search patterns, and permission settings as needed for your environment.
 
-## Author
+## Authors
 
 Brendan Conroy, Kuleni, Frederick
-
-
