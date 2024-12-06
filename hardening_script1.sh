@@ -67,8 +67,7 @@ sudo find /home -type f -iname '*research*' -exec ls -l {} \;
 #set permission for research group
 echo "Updating permissions for Research scripts..." 
 sudo find /home -type f -iname '*research*' -exec chmod 770 {} \; 
-echo "Permissions updated for Research" 
-scripts" >> $REPORT_FILE
+echo "Permissions updated for Research scripts" >> $REPORT_FILE
 #find finance scripts
 echo "Updating permissions for Finance scripts"
 sudo find /home -type f -iname '*finance*' -exec ls -l {} \;
