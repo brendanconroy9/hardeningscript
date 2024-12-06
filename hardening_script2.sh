@@ -23,7 +23,7 @@ printf "\n" >> $REPORT_FILE
 # Print logging config
 echo “Printing out logging configuration data”
 sudo journalctl
-echo "journald.conf file data: $(cat /e/tc/systemd/joournald.conf)" >> $REPORT_FILE
+echo "journald.conf file data: $(cat /e/tc/systemd/journald.conf)" >> $REPORT_FILE
 printf "\n" >> $REPORT_FILE
 
 echo "logrotate.conf file data:$(cat /etc/logrotate.conf)" >> $REPORT_FILE
