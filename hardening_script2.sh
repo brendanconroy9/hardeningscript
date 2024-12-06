@@ -22,7 +22,7 @@ printf "\n" >> $REPORT_FILE
 
 # Print logging config
 echo “Printing out logging configuration data”
-sudo journalctl -n 50 >> $REPORT_FILE  #  outputs the last 50 lines
+sudo journalctl -n 50   #  prints the last 50 lines
 echo "journald.conf file data: $(cat /etc/systemd/journald.conf)" >> $REPORT_FILE
 printf "\n" >> $REPORT_FILE
 
