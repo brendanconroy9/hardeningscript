@@ -6,7 +6,7 @@ REPORT_FILE="Report_File_2"
 
 echo "Gaterhing details from sshd configuration file"
 echo "sshd configuration file:$(cat /etc/ssh/sshd_config)" >> $REPORT_FILE
-print "\n" >> $REPORT_FILE
+printf "\n" >> $REPORT_FILE
 
 # Update the packages and services
 
@@ -22,8 +22,8 @@ printf "\n" >> $REPORT_FILE
 
 # Print logging config
 echo “Printing out logging configuration data”
-sudo journalctl
-echo "journald.conf file data: $(cat /e/tc/systemd/journald.conf)" >> $REPORT_FILE
+sudo journalctl -n 50 >> $REPORT_FILE  #  outputs the last 50 lines
+echo "journald.conf file data: $(cat /etc/systemd/journald.conf)" >> $REPORT_FILE
 printf "\n" >> $REPORT_FILE
 
 echo "logrotate.conf file data:$(cat /etc/logrotate.conf)" >> $REPORT_FILE
